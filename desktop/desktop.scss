@@ -158,3 +158,49 @@ img.avatar {
     display: inline-block;
     margin-left: 5px;
 }
+
+
+// Hide header menu on mobile devices
+@media screen and (max-width: 1024px) {
+    .header-container {
+        display: none !important;
+    }
+}
+
+// Show header menu only on desktop with size > 1024px
+@media screen and (min-width: 1024px) {
+    span#header-top-links {
+        display: block !important;
+        margin: 10px 0 0 0;
+    }
+    div#header-navbar {
+        max-width: none;
+        width: auto;
+        z-index: 1040;
+        position: fixed;
+        top: 0;
+        left: 25%;
+    }
+    .nav-link-container li {
+        display: inline-block;
+        float: left;
+    }
+    .nav-link-container a {
+        color: #111;
+        text-decoration: none;
+        text-align: center;
+        line-height: 48px;
+        font-size: 14px;
+        padding: 0 1em;
+    }
+    .nav-link-container a.forum{
+        text-decoration: none;
+        padding: 2px 5px;
+        background: #333;
+        color: #FFF;
+        border-radius: 3px;
+    }
+    .nav-link-container {
+        display: inline
+    }
+}
