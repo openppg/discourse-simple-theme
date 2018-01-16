@@ -1,4 +1,9 @@
-## Sam's simple discourse theme
+## OpenPPG Discourse theme
 
-More info at: https://meta.discourse.org/t/sams-personal-minimal-topic-list-design/23552?u=sam
+Forked from https://github.com/SamSaffron/discourse-simple-theme
 
+### Development
+
+Theme file structure: https://meta.discourse.org/t/how-to-develop-custom-themes/60848 
+
+More coming soon...
