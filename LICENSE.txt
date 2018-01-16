@@ -1,4 +1,4 @@
-Copyright (c) 2016: Sam Saffron
+Copyright (c) 2016: Sam Saffron, 2018 OpenPPG
 
 MIT License
 
