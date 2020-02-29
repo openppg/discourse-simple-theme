@@ -2,7 +2,6 @@
     background-color: white;
 }
 
-
 .topic-list > tbody tr:not(.last-visit):not(.topic-list-item-separator) td {
     border-bottom: 1px solid #eee;
 }
@@ -56,7 +55,11 @@
     padding: 0;
 }
 
- 
+.category-list div h3 a div .category-logo {
+  margin-right: 15px;
+  width: 100%;
+}
+
 .topic-list {
     .fa-tag {
         opacity: 0.7;
@@ -71,7 +74,7 @@
             font-weight: normal;
         }
         a.heatmap-high {
-            color: #c66 !important;   
+            color: #c66 !important;
         }
         width: 100px;
     }
@@ -160,9 +163,61 @@ img.avatar {
 }
 
 body {
-.topic-list-item.visited a.badge-wrapper, 
-.latest-topic-list-item.visited a.badge-wrapper, 
+.topic-list-item.visited a.badge-wrapper,
+.latest-topic-list-item.visited a.badge-wrapper,
 .category-topic-link.visited a.badge-wrapper {
     opacity: 1;
 }
+
+/* The outermost wrapper */
+#openppg-navbar {
+    z-index: 1040;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+/* is there a better way to detect PM pages and Topic pages from CSS? */
+body[class*="archetype-"] #openppg-navbar {
+    position: absolute;
+}
+/* This inner wrapper makes sure the nav bar respects your forum's max width */
+span#openppg-top-links {
+    display: block !important;
+    margin: 8px auto 0 auto;
+    max-width: 1110px;
+}
+/* The list of links itself */
+.openppg-nav-link-container li {
+    display: inline-block;
+    float: left;
+}
+/* <a> tags are links, while the <b> tag is the current page */
+.openppg-nav-link-container {
+    display: block;
+    overflow: hidden;
+    margin-left: 160px;
+    position: absolute;
+}
+.openppg-nav-link-container a,
+.openppg-nav-link-container b {
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+    line-height: 48px;
+    font-size: 14px;
+    padding: 0.75em;
+    transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+.openppg-nav-link-container a:hover,
+.openppg-nav-link-container a:active,
+.openppg-nav-link-container a:focus {
+    background: #333;
+    color: #FFF;
+}
+
+@media screen and (max-width: 1024px) {
+    #openppg-navbar {
+        display: none !important;
+    }
 }

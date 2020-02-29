@@ -40,15 +40,15 @@
 {{raw "list/posts-count-column" topic=topic}}
 
 <td class="last-post">
-<div class='poster-avatar'>
-<a href="{{topic.lastPostUr}}" data-user-card="{{topic.last_poster_username}}">{{avatar topic.lastPoster usernamePath="username" imageSize="medium"}}</a>
-</div>
-<div class='poster-info'>
-<a href="{{topic.lastPostUrl}}">
-{{format-date topic.bumpedAt format="tiny"}}
-</a>
-<span class='editor'><a href="/users/{{topic.last_poster_username}}" data-auto-route="true" data-user-card="{{topic.last_poster_username}}">{{topic.last_poster_username}}</a></span>
-</div>
+  <div class='poster-avatar'>
+    <a href="{{topic.lastPostUr}}" data-user-card="{{topic.last_poster_username}}">{{avatar topic.lastPoster usernamePath="username" imageSize="medium"}}</a>
+  </div>
+  <div class='poster-info'>
+    <a href="{{topic.lastPostUrl}}">
+      {{format-date topic.bumpedAt format="tiny"}}
+    </a>
+    <span class='editor'><a href="/users/{{topic.last_poster_username}}" data-auto-route="true" data-user-card="{{topic.last_poster_username}}">{{topic.last_poster_username}}</a></span>
+  </div>
 </td>
 </script>
 
@@ -75,18 +75,26 @@
 <script>
 
 (function(){
+  var TopicListItemView = require('discourse/components/topic-list-item').default;
 
-var TopicListItemView = require('discourse/components/topic-list-item').default;
-
-
-TopicListItemView.reopen({
-    showCategory: function(){
-        return !this.get('controller.hideCategory') &&
-                this.get('topic.creator') &&
-                this.get('topic.category.name') !== 'uncategorized';
-    }.property()
-});
+  TopicListItemView.reopen({
+      showCategory: function(){
+          return !this.get('controller.hideCategory') &&
+                  this.get('topic.creator') &&
+                  this.get('topic.category.name') !== 'uncategorized';
+      }.property()
+  });
 
 })();
 
 </script>
+
+<div id="openppg-navbar">
+  <span id="openppg-top-links">
+    <ul class="openppg-nav-link-container">
+      <li><a href="https://openppg.com/shop" target="_blank" class="nav-link">SHOP</a></li>
+      <li><b><a href="https://community.openppg.com" class="forum-link">COMMUNITY</a></b></li>
+      <li><a href="https://openppg.com/contact/" target="_blank" class="nav-link">CONTACT</a></li>
+    </ul>
+  </span>
+</div>
