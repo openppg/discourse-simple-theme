@@ -158,6 +158,15 @@ body {
 }
 
 // customized for OpenPPG
+
+.categories-list .category .category-description {
+  overflow: visible;
+}
+
+.category-logo.aspect-image {
+  margin: 0.33em 2em 0.33em 0;
+}
+
 /* The outermost wrapper */
 #openppg-navbar {
   z-index: 1040;
