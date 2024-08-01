@@ -149,6 +149,11 @@ img.avatar {
   margin-left: 5px;
 }
 
+.category-title-link.category-logo.aspect-image {
+  float: none;
+  margin: 0.1em 0.1em 0.1em 0;
+}
+
 body {
   .topic-list-item.visited a.badge-wrapper,
   .latest-topic-list-item.visited a.badge-wrapper,
