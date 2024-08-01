@@ -149,10 +149,11 @@ img.avatar {
   margin-left: 5px;
 }
 
-.category-title-link.category-logo.aspect-image {
-  float: none;
+.category-logo.aspect-image {
+  float: none !important;
   margin: 0.1em 0.1em 0.1em 0;
 }
+
 
 body {
   .topic-list-item.visited a.badge-wrapper,
